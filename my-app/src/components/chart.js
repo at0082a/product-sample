@@ -16,7 +16,6 @@ export default class DailyEventsChart extends React.Component {
     let type = this.props.type;
     this.setState({type: type});
     this.setState({data: this.props.data});
-    // console.log(this.state.type);
   }
 
   componentWillReceiveProps (prevProps) {
@@ -53,12 +52,6 @@ export default class DailyEventsChart extends React.Component {
 					name: "Events",
 					showInLegend: true,
 					dataPoints: daily
-        },
-        {
-          type: "spline",
-          name: "events",
-          showInLegend: true,
-          dataPoints: [{'y': 40, label: '01-04-2017'}, {'y': 32, label: '01-05-2017'}]
         }
 				]
 		};
@@ -66,7 +59,6 @@ export default class DailyEventsChart extends React.Component {
 		return (
 		<div className='charts'>
 			<CanvasJSChart options = {options}/>
-			{/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
 		</div>
 		);
   }
